@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">My Application 1</string>
+    <string name="value">0</string>
+    <string name="ResetCount">Reset</string>
+    <string name="Click">Count up</string>
+</resources>
