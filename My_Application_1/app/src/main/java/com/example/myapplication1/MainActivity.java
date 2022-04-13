@@ -1,5 +1,6 @@
 package com.example.myapplication1;
 
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -43,11 +44,34 @@ public class MainActivity extends AppCompatActivity {//AppCompatActivity는 Acti
         });
 
     }
+
     @Override
-    public void onSaveInstanceState(Bundle outState) {
+    public void onSaveInstanceState(Bundle outState) {//현재 state저장 메소드 configuration 변경시 자동호출
 
         super.onSaveInstanceState(outState);
 
         outState.putString("curcount",String.valueOf(txtCount.getText()));
     }
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        SharedPreferences myPrefs = getSharedPreferences("mySaveStateArea", MainActivity.MODE_PRIVATE);
+        SharedPreferences.Editor editor = myPrefs.edit();//SharedPreferences의 Editor이용
+        editor.putString("Counter", txtCount.getText().toString());//데이터타입에따라 추가
+        editor.commit();//commit해야적용
+    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        SharedPreferences myPrefs = getSharedPreferences("mySaveStateArea", MainActivity.MODE_PRIVATE);
+        if(myPrefs!=null && myPrefs.contains("Counter")) {
+            String uCount = myPrefs.getString("Counter", "");
+            count = Integer.valueOf(uCount);
+            txtCount.setText(uCount);
+        }
+    }
+
+
 }
