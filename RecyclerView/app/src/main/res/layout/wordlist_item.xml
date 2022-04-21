@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--리사이클러뷰는 무조건 linearlayout 안에정의 안에 보여줄 뷰배치하는데 이것들은 id반드시 부여해야함-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="6dp"
+    android:background="#A59440"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/word"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="34sp" />
+
+</LinearLayout>
