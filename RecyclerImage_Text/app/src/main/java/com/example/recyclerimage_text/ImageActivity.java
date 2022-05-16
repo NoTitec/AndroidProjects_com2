@@ -16,7 +16,7 @@ public class ImageActivity extends AppCompatActivity {
 
         ImageView imgView= findViewById(R.id.imgView);
         //prepare for receiving intent from adapter
-        Intent intent=new Intent(this.getIntent());//intent가 있는지 확인하고 가져옴
+        Intent intent=new Intent(this.getIntent());//누군가 ImageActivity class에 전달한 intent가 있는지 확인하고 가져옴
         int s = intent.getIntExtra("image", 0);//값이없을경우 default는 0으로
         Drawable dr = getDrawable(s);
         imgView.setImageDrawable(dr);

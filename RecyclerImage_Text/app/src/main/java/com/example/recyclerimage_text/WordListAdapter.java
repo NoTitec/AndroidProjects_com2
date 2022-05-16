@@ -40,11 +40,11 @@ private List<Items> itemsList;
 
 @Override
 
-public WordListAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+public WordListAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {//parent는 리사이클러뷰
 
-        View view = LayoutInflater.from(mContext).inflate(R.layout.wordlist_item,parent,false);
+        View view = LayoutInflater.from(mContext).inflate(R.layout.wordlist_item,parent,false);// 메인 context의 어댑터 레이아웃을 리사이클러뷰를위해 inflat함
 
-        return new MyViewHolder(view);
+        return new MyViewHolder(view);//1개의 새로운 뷰홀더 리턴
 
         }
 
@@ -52,15 +52,15 @@ public WordListAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int vie
 
 @Override
 
-public void onBindViewHolder(WordListAdapter.MyViewHolder holder, int position) {
+public void onBindViewHolder(WordListAdapter.MyViewHolder holder, int position) {//oncreateViewholder로 만든 1개 뷰홀더에 데이터를 bind
 
 
 
-final Items item = itemsList.get(position);
+final Items item = itemsList.get(position);// item리스트 번호 가져옴
 
         //convert resource-ID to drawble image
 
-        Drawable d = mContext.getDrawable(item.getImgID());
+        Drawable d = mContext.getDrawable(item.getImgID());//이미지는 Drawble 에 이미지 id 넣어서 객체로 만듬
 
         holder.img.setImageDrawable(d);
 
@@ -80,19 +80,13 @@ public int getItemCount() {
 
 
 
-class MyViewHolder extends RecyclerView.ViewHolder
-
-        implements View.OnClickListener {
-
-
+class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {//리사이클러뷰의 뷰홀더 inner클래스
 
     public TextView name;
     public TextView kname;
     public ImageView img;
 
-
-
-    public MyViewHolder(View itemView) {
+    public MyViewHolder(View itemView) {// 뷰홀더 생성자
 
         super(itemView);
 
@@ -122,12 +116,12 @@ class MyViewHolder extends RecyclerView.ViewHolder
 
         // Get the position of the item that was clicked.
 
-        int mPosition = getLayoutPosition();
+        int mPosition = getLayoutPosition();//선택한 뷰혼더 넘버
 
         switch ( view.getId() ) {
             case R.id.txtName: case R.id.txtKName: // ss = "name";
                 // search method 1
-                Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);//
+                Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);//intent 타입 제공
                 intent.putExtra(SearchManager.QUERY, itemsList.get(mPosition).getTitleStr()); // query contains search string
                 // search method 2
 //                try {
