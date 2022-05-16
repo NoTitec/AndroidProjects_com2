@@ -11,11 +11,11 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    private RecyclerView recyclerView;
+    private RecyclerView recyclerView;//리사이클러뷰 참조변수
 
-    private WordListAdapter wordListAdapter;
+    private WordListAdapter wordListAdapter;//리사이클러뷰 데이터 어댑터 참조변수
 
-    private List<Items> itemsList;
+    private List<Items> itemsList;//실제 item들의 참조변수
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,24 +28,24 @@ public class MainActivity extends AppCompatActivity {
         recyclerView = (RecyclerView) findViewById(R.id.recyclerview);
 
 
-        wordListAdapter = new WordListAdapter(this, itemsList);
+        wordListAdapter = new WordListAdapter(this, itemsList);//어댑터에 context와 데이터 전달
 
         //recyclerView.setHasFixedSize(true);
 
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());//리사이클러뷰의 레이아웃매니져 생성(linear레이아웃으로)
 
         //RecyclerView.LayoutManager layoutManager = new GridLayoutManager(this, 2);
 
-        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setLayoutManager(layoutManager);//리사이클러뷰의 레이아웃 set
 
         //recyclerView.setItemAnimator(new DefaultItemAnimator());
 
-        recyclerView.setAdapter(wordListAdapter);
+        recyclerView.setAdapter(wordListAdapter);//리사이클러뷰에 어댑터 연결
 
 
         prepareItems();
 
-        wordListAdapter.notifyDataSetChanged();
+        wordListAdapter.notifyDataSetChanged();//어댑터에 데이터 변경 알림( 이게없어도 동작정상-> 왜?)
 
     }
 

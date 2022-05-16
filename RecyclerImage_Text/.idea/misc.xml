@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidProjects_com2/RecyclerImage_Text/app/src/main/res/layout/activity_main.xml" value="0.38645833333333335" />
+        <entry key="..\:/AndroidProjects_com2/RecyclerImage_Text/app/src/main/res/layout/image_main.xml" value="0.38645833333333335" />
+        <entry key="..\:/AndroidProjects_com2/RecyclerImage_Text/app/src/main/res/layout/wordlist_item.xml" value="0.38645833333333335" />
         <entry key="..\:/AndroidStudioProjects/RecyclerImage_Text/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/AndroidStudioProjects/RecyclerImage_Text/app/src/main/res/layout/image_main.xml" value="0.1" />
         <entry key="..\:/AndroidStudioProjects/RecyclerImage_Text/app/src/main/res/layout/wordlist_item.xml" value="0.4" />
