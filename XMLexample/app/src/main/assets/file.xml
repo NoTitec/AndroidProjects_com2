@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+    <contacts>
+        <name>Mary Gilbert</name>
+        <email>mgilbert0@jiathis.com</email>
+        <phone>51-(497)567-1847</phone>
+    </contacts>
+    <contacts>
+        <name>Wanda Berry</name>
+        <email>wberry1@altervista.org</email>
+        <phone>86-(851)820-7954</phone>
+    </contacts>
+    <contacts>
+        <name>Debra Price</name>
+        <email>dprice2@ibm.com</email>
+        <phone>967-(842)314-6933</phone>
+    </contacts>
+    <contacts>
+        <name>Amanda Palmer</name>
+        <email>apalmer3@dyndns.org</email>
+        <phone>7-(435)889-0419</phone>
+    </contacts>
+    <contacts>
+        <name>Benjamin Gordon</name>
+        <email>bgordon4@live.com</email>
+        <phone>58-(908)519-3746</phone>
+    </contacts>
+
+</root>
