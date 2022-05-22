@@ -45,12 +45,12 @@ public class RecyclerviewItemAdapter extends RecyclerView.Adapter<RecyclerviewIt
         //image can be read thru internet
         // we need another asynctaskloader, which is cumbersome
         // we use external library Picasso
-        Picasso.get().load(item.getImage())
-                .placeholder(R.drawable.ic_baseline_play_arrow_24)
+        Picasso.get().load(item.getImage())//item의 http...string 참조 이미지를 로드함
+                .placeholder(R.drawable.ic_baseline_play_arrow_24)//내부 벡터이미지 하나 배치
                 //.error(R.drawable.error)
                 //.fit()
                 //.centerCrop()
-                .into(holder.img); //resize(width,height).
+                .into(holder.img); //resize(width,height). 뷰홀더 이미지뷰에 로드이미지 배치
 //        Glide.with(context).load(item.getImage())
 //                .centerCrop()
 //                .placeholder(R.drawable.load)

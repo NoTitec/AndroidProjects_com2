@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidProjects_com2/MyMusicPlayer/app/src/main/res/layout/activity_main.xml" value="0.1879432624113475" />
+        <entry key="..\:/AndroidProjects_com2/MyMusicPlayer/app/src/main/res/layout/item_row.xml" value="0.1879432624113475" />
         <entry key="..\:/AndroidStudioProjects/MyMusicPlayer/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.4225" />
         <entry key="..\:/AndroidStudioProjects/MyMusicPlayer/app/src/main/res/drawable/ic_baseline_play_arrow_24.xml" value="0.4225" />
         <entry key="..\:/AndroidStudioProjects/MyMusicPlayer/app/src/main/res/drawable/ic_launcher_background.xml" value="0.4225" />
