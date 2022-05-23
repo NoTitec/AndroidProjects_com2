@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         try {
             InputStream is = getAssets().open("file.xml");
 
-            DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();//dom 파서는 xml전체를 메모리에 미리 로드해놓음
+            DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();//dom 파서는 xml전체를 메모리에 미리 로드해놓음 sax 는 읽으면서 파싱
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
             Document doc = dBuilder.parse(is);
 
@@ -33,10 +33,10 @@ public class MainActivity extends AppCompatActivity {
             StringBuilder str = new StringBuilder();
             NodeList empNodesList = doc.getElementsByTagName("contacts");
 
-            for (int i = 0; i < empNodesList.getLength(); i++) {
+            for (int i = 0; i < empNodesList.getLength(); i++) {//xml에서 contacts 모든 필드 순회
 
-                Element empItem = (Element) empNodesList.item(i);
-                NodeList empItemChildNodes = empItem.getChildNodes();
+                Element empItem = (Element) empNodesList.item(i);//1개의 contacts Element
+                NodeList empItemChildNodes = empItem.getChildNodes();//1개의 contacts Element 의 모든 하위 item가짐
 
                 for (int j = 0; j < empItemChildNodes.getLength(); j++) {
                     Node childNode = empItemChildNodes.item(j);
