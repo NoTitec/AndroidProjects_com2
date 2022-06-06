@@ -91,7 +91,7 @@ public class ShowHeadlines extends AppCompatActivity implements LoaderManager.Lo
     @NonNull
     @Override
     public Loader<ArrayList<SingleItem>> onCreateLoader(int id, Bundle args) {//내부에서 동작할 asnctask 상속한 클래스 생성하여 반환
-        return new FetchData(getApplicationContext(), urlAddress); //this);
+        return new FetchData(getApplicationContext(), urlAddress); //this);//로드매니저가 FetchData클래스만들고 실행
     }
 
     @Override
@@ -160,7 +160,7 @@ public class ShowHeadlines extends AppCompatActivity implements LoaderManager.Lo
                     newsList.clear();
                     NodeList itemNodes = treeElements.getElementsByTagName("item");//item 태그가진 노드들 리스트 생성
                     if ((itemNodes != null) && (itemNodes.getLength() > 0)) {//item태그의 내용물이 1개 이상인경우
-                        for (int i = 0; i < itemNodes.getLength(); i++) {//item개수만큼 반복하며 dissectitemnode메소드로 원하는 태그정보 추출해 Singleitemlist에 저장
+                        for (int i = 0; i < itemNodes.getLength(); i++) {//item개수만큼 반복하며 아래쪽 dissectitemnode메소드로 원하는 태그정보 추출해 Singleitemlist에 저장
                             newsList.add(dissectItemNode(itemNodes, i));
                         }// for
                     }// if
@@ -175,7 +175,7 @@ public class ShowHeadlines extends AppCompatActivity implements LoaderManager.Lo
             return newsList;  //to be consumed 완성된 기사목록 리턴
         }
 
-        @Override//처리한 newsList를 onloadfinished에게 넘겨줌 여기서 data변수엔 자동으로 loadinbackground반환값이 들어감
+        @Override//처리한 newsList를 로드매니저의 onloadfinished에게 넘겨줌 여기서 data변수엔 자동으로 loadinbackground반환값이 들어감
         public void deliverResult(ArrayList<SingleItem> data) {
             super.deliverResult(data);
         }
