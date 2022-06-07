@@ -1,0 +1,24 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        //이게 여기있어야됨 안됨 교수......
+        jcenter()
+
+        maven {
+            url 'https://microsoftmaps.jfrog.io/artifactory/Maven/'
+        }
+    }
+}
+
+
+rootProject.name = "Maps"
+include ':app'
