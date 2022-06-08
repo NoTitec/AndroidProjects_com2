@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mMapView = new MapView(this, MapRenderMode.VECTOR);  // or use MapRenderMode.RASTER for 2D map
+        mMapView = new MapView(this, MapRenderMode.VECTOR);  // or use MapRenderMode.RASTER for 2D map //why this is not start with find_by_id?
         mMapView.setCredentialsKey(BuildConfig.CREDENTIALSKEY);
         ((FrameLayout)findViewById(R.id.map_view)).addView(mMapView);
         mMapView.setLanguage("ko");

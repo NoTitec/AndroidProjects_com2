@@ -10,7 +10,7 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        //이게 여기있어야됨 안됨
+        //jcenter is hear
         jcenter()
 
         maven {
@@ -18,7 +18,5 @@ dependencyResolutionManagement {
         }
     }
 }
-
-
-rootProject.name = "Maps"
+rootProject.name = "Mapgradletest"
 include ':app'
