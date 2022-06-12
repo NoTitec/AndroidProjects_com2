@@ -3,10 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidProjects_com2/SwipePractice/app/src/main/res/drawable/s1.xml" value="0.1965" />
         <entry key="..\:/AndroidProjects_com2/SwipePractice/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/AndroidProjects_com2/SwipePractice/app/src/main/res/layout/image_main.xml" value="0.18617021276595744" />
+        <entry key="..\:/AndroidProjects_com2/SwipePractice/app/src/main/res/layout/item_row.xml" value="0.18617021276595744" />
         <entry key="..\:/AndroidProjects_com2/SwipePractice/app/src/main/res/layout/slide_page1.xml" value="0.33" />
         <entry key="..\:/AndroidProjects_com2/SwipePractice/app/src/main/res/layout/slide_page2.xml" value="0.33" />
         <entry key="..\:/AndroidProjects_com2/SwipePractice/app/src/main/res/layout/slide_page3.xml" value="0.33" />
+        <entry key="..\:/AndroidProjects_com2/SwipePractice/app/src/main/res/layout/slide_page4.xml" value="0.18617021276595744" />
       </map>
     </option>
   </component>

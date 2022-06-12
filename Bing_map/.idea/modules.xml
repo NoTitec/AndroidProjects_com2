@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Bing_map.iml" filepath="$PROJECT_DIR$/.idea/modules/Bing_map.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Bing_map.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Bing_map.app.iml" />
+    </modules>
+  </component>
+</project>

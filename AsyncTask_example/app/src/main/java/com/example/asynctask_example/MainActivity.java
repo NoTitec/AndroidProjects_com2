@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
     private TextView tvJsonResult;
     //LoaderManager.LoaderCallbacks<String> loaderCallbacks = this;
-    private static final int LOADER_ID_USERACCOUNT = 10000;
+    private static final int LOADER_ID_USERACCOUNT = 10000;//백그라운드 작업 번호
     private LoaderManager loaderManager;
 
     @Override
@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         //tvJsonResult.setMovementMethod(new ScrollingMovementMethod());
     }
 
+    //LoaderManager implements시 구현해야하는 매소드 3개
     @NonNull
     @Override
     public Loader<String> onCreateLoader(int id, Bundle args) {//백그라운드 작업을 호출할 준비
